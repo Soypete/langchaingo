@@ -8,7 +8,6 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/tmc/langchaingo/callbacks"
 	"github.com/tmc/langchaingo/llms"
 	"github.com/tmc/langchaingo/llms/local/internal/localclient"
 )
@@ -22,7 +21,7 @@ var (
 
 // LLM is a local LLM implementation.
 type LLM struct {
-	CallbacksHandler callbacks.Handler
+	callbackshandler callbacks.handler
 	client           *localclient.Client
 }
 
